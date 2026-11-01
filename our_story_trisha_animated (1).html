@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b20">
+<title>Our Story — Trisha</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap');
+:root{--bg:#090b20;--panel:#171831;--ink:#fbf7ef;--muted:#c1bad0;--gold:#efd39a;--violet:#a895e5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans','Noto Serif Bengali',sans-serif;overflow-x:hidden}button{font:inherit}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:38px 22px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#403665 0%,#222044 36%,#090b20 80%)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #efd39a30;border-radius:50%;width:min(80vw,620px);aspect-ratio:1;animation:orbit 22s ease-in-out infinite alternate}.hero:after{width:min(108vw,850px);animation-duration:30s;animation-direction:alternate-reverse;opacity:.65}
+@keyframes orbit{to{transform:scale(1.13) rotate(18deg);opacity:.18}}
+.stars{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#efd39a 1px,transparent 1.5px),radial-gradient(#bca8ff 1px,transparent 1.5px);background-size:83px 83px,127px 127px,173px 173px;background-position:10px 20px,48px 70px,20px 90px;opacity:.28;animation:twinkle 5s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.12;transform:translateY(0)}to{opacity:.42;transform:translateY(-8px)}}
+.hero-inner{position:relative;z-index:1;max-width:780px;animation:rise 1.3s cubic-bezier(.2,.75,.25,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.name{font:600 clamp(2.2rem,8vw,5rem)/1.2 'Noto Serif Bengali',serif;letter-spacing:.04em;color:var(--gold);text-shadow:0 0 18px #efd39a88,0 0 48px #a895e566;margin:0 0 14px;animation:glow 3.5s ease-in-out infinite alternate}
+@keyframes glow{to{text-shadow:0 0 25px #efd39acc,0 0 70px #a895e5aa}}
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:.68rem;color:var(--gold);margin:0 0 25px;animation:fadeIn 1.8s .3s both}
+.hero h1{font:500 clamp(1.65rem,5.5vw,3.4rem)/1.65 'Noto Serif Bengali',serif;margin:0 auto 32px;text-shadow:0 0 35px #c4a8ff35;animation:fadeIn 1.8s .5s both}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.enter{border:1px solid #efd39ac9;color:#201a30;background:linear-gradient(120deg,#f5e2b5,#c9a66d);border-radius:999px;padding:15px 30px;font-weight:700;letter-spacing:.04em;box-shadow:0 0 22px #d8b97966;cursor:pointer;animation:buttonPulse 2.8s 1.2s infinite;transition:transform .25s,box-shadow .25s}
+@keyframes buttonPulse{0%,100%{box-shadow:0 0 18px #d8b97955}50%{box-shadow:0 0 38px #efd39acc,0 0 65px #a895e544}}
+.enter:hover{transform:translateY(-4px) scale(1.03)}.hint{color:#d0c9df;font-size:.8rem;margin-top:18px;animation:fadeIn 2s 1s both}
+.float-heart{position:absolute;z-index:0;color:#efd39a;opacity:0;bottom:-35px;animation:floatUp 11s linear infinite;font-size:18px;text-shadow:0 0 12px #efd39a}.float-heart:nth-of-type(2){left:12%;animation-delay:2s}.float-heart:nth-of-type(3){left:78%;animation-delay:5s}.float-heart:nth-of-type(4){left:55%;animation-delay:8s}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.55}85%{opacity:.35}100%{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+main{max-width:850px;margin:auto;padding:78px 20px 90px;opacity:0;transform:translateY(18px);transition:opacity .9s,transform .9s}main.visible{opacity:1;transform:translateY(0)}
+.intro{text-align:center;margin-bottom:44px}.intro .eyebrow{margin-bottom:12px;animation:none}.intro h2{font:600 clamp(1.8rem,4vw,2.6rem) 'Noto Serif Bengali',serif;margin:0 0 12px}.intro p{color:var(--muted);margin:0}
+.chapter{position:relative;margin:24px 0;padding:27px clamp(20px,5vw,38px);border:1px solid #b6a5d536;border-radius:22px;background:linear-gradient(145deg,#1c1d3beF,#111329f5);box-shadow:0 16px 45px #0005;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s;animation:cardIn .8s both}
+.chapter:hover{transform:translateY(-5px);border-color:#efd39a80;box-shadow:0 20px 55px #0008,0 0 22px #a895e51c}
+@keyframes cardIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.chapter:nth-of-type(2){animation-delay:.12s}.chapter:nth-of-type(3){animation-delay:.22s}.chapter:nth-of-type(4){animation-delay:.32s}
+.chapter:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(#efd39a,#8c79c9);opacity:.85}.chapter small{color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.68rem}.chapter h3{font:600 1.35rem 'Noto Serif Bengali',serif;margin:10px 0 12px}.chapter p{font:400 1.02rem/1.95 'Noto Serif Bengali',serif;color:#e5dfed;margin:0}
+.letter{background:linear-gradient(135deg,#f4e9d2,#dfcfad);color:#302943;border:0;box-shadow:0 18px 55px #0006}.letter:before{background:#a88751}.letter small{color:#876a3d}.letter h3{color:#382c4b}.letter p{color:#443b4c}.signature{font:600 1.15rem 'Noto Serif Bengali',serif;color:#775b39;margin-top:20px}
+.secret-wrap{text-align:center;padding:45px 10px 10px}.secret-wrap p{color:var(--muted);font-size:.9rem}.secret{background:transparent;border:1px solid #d7bd85;color:var(--gold);padding:14px 24px;border-radius:999px;cursor:pointer;transition:.25s}.secret:hover{background:#e8c98b16;box-shadow:0 0 24px #e8c98b55;transform:scale(1.04)}
+footer{text-align:center;color:#77758e;font-size:.76rem;padding:20px}
+.overlay{position:fixed;inset:0;background:#03040bd9;display:flex;align-items:flex-end;justify-content:center;z-index:5;opacity:0;visibility:hidden;transition:.3s}.overlay.show{opacity:1;visibility:visible}.sheet{width:min(100%,650px);background:linear-gradient(145deg,#282345,#15172f);border:1px solid #d7bd8545;border-bottom:0;border-radius:26px 26px 0 0;padding:14px 28px 36px;transform:translateY(45px);transition:.4s cubic-bezier(.2,.8,.2,1)}.show .sheet{transform:translateY(0)}.handle{height:4px;width:42px;border-radius:9px;background:#aaa2bd66;margin:0 auto 24px}.sheet h3{font:600 1.4rem 'Noto Serif Bengali',serif;color:var(--gold);margin:0 0 12px}.sheet p{font:1rem/1.9 'Noto Serif Bengali',serif;color:#eee8f3}.close{display:block;margin:20px auto 0;background:#e8c98b;color:#211a31;border:0;border-radius:99px;padding:11px 24px;font-weight:700;cursor:pointer}
+@media(min-width:700px){main{padding-top:100px}.chapter{margin:30px 0}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section class="hero" id="welcome">
+  <div class="stars"></div><span class="float-heart" style="left:27%">♡</span><span class="float-heart">✦</span><span class="float-heart">♡</span><span class="float-heart">✧</span>
+  <div class="hero-inner">
+    <div class="name">Trisha</div>
+    <div class="eyebrow">A story written in little moments</div>
+    <h1>সেদিন তোমায় দেখার পর...<br>চাইলেও তোমার দিক থেকে<br>চোখ সরাতে পারিনি।</h1>
+    <button class="enter" id="enterBtn">Enter Our Story <span aria-hidden="true">→</span></button>
+    <div class="hint">একটা গল্প, কিছু স্মৃতি, আর কিছু না-বলা কথা</div>
+  </div>
+</section>
+<main id="story">
+  <header class="intro">
+    <div class="eyebrow">The chapters</div>
+    <h2>আমাদের গল্পের কিছু পৃষ্ঠা</h2>
+    <p>কিছু মুহূর্ত সময় পেরিয়েও থেকে যায়।</p>
+  </header>
+  <article class="chapter">
+    <small>Chapter 01 · The First Glance</small><h3>প্রথম দেখা</h3>
+    <p>তোমার কাজিনের বাড়িতে সেই প্রথম দেখা। চারপাশে অনেক মানুষ, অনেক কথা—তবু অদ্ভুতভাবে আমার চোখ বারবার তোমার দিকেই ফিরে যাচ্ছিল। সেদিন হয়তো তুমি বুঝতে পারোনি, কিন্তু আমার মনে একটা ছোট্ট গল্পের শুরু হয়ে গিয়েছিল।</p>
+  </article>
+  <article class="chapter">
+    <small>Chapter 02 · The Curiosity & Eighth Night</small><h3>কৌতূহল আর অষ্টমীর রাত</h3>
+    <p>তারপর তোমাকে নিয়ে একটু একটু করে কৌতূহল বাড়তে লাগল। বন্ধুদের কথায়, টুকরো টুকরো আলোচনায় তোমার নামটা আরও পরিচিত হয়ে উঠল। দুর্গাপুজোর সেই মহাষ্টমীর রাত—একসঙ্গে বাইরে কাটানো সময়টা আজও আলাদা করে মনে পড়ে। আলো, ভিড় আর উৎসবের মাঝেও কিছু মুহূর্ত শুধু নিজের মতো করে মনে থেকে যায়।</p>
+  </article>
+  <article class="chapter">
+    <small>Chapter 03 · Conversations</small><h3>কথার শুরু</h3>
+    <p>এরপর শুরু হলো রাত জেগে মেসেজ, ফোনে কথা, আর ছোট ছোট বিষয় নিয়ে কত গল্প। কখন যে সাধারণ কথাগুলো দিনের বিশেষ অংশ হয়ে উঠেছিল, বুঝতেই পারিনি। কিছু রাত ঘুমের চেয়ে কথার জন্যই বেশি সুন্দর হয়ে উঠত।</p>
+  </article>
+  <article class="chapter letter">
+    <small>Chapter 04 · The Open Letter</small><h3>প্রিয় ত্রিশা,</h3>
+    <p>জানি না এই কথাগুলো কখনও তোমার কাছে পৌঁছবে কি না। হঠাৎ করে সব কথা থেমে যাওয়াটা আমার কাছে সহজ ছিল না। কোনো কারণ না জেনে, কোনো উত্তর না পেয়ে নীরবতার সামনে দাঁড়িয়ে থাকা সত্যিই কষ্টের। হয়তো তোমার নিজের কিছু কারণ ছিল, হয়তো সময় তোমাকে অন্যদিকে নিয়ে গেছে—আমি তা জানি না, আর তোমাকে কোনো ব্যাখ্যা দিতেও বাধ্য করতে চাই না।<br><br>শুধু এটুকু বলতে চাই, আমাদের কথাগুলো আর সেই ছোট ছোট মুহূর্তগুলো আমার কাছে সত্যিই মূল্যবান ছিল। যদি কোনোদিন আমার কোনো কথা বা আচরণে তোমার খারাপ লেগে থাকে, মন থেকে দুঃখিত।<br><br>তোমার জীবনে অনেক ভালো কিছু আসুক। তুমি ভালো থেকো, নিজের যত্ন নিও, আর মন খুলে হাসতে পারো—এই কামনাই করি। সব গল্পের শেষ একসঙ্গে হয় না, তবু কিছু গল্প সুন্দর স্মৃতি হয়ে থেকে যায়।</p>
+    <div class="signature">ভালো থেকো, ত্রিশা।</div>
+  </article>
+  <section class="secret-wrap">
+    <div class="eyebrow">Just between these lines</div>
+    <button class="secret" id="secretBtn">✧ Unlock Secret Message ✧</button>
+    <p>শেষে লুকিয়ে আছে আরও একটি ছোট্ট কথা।</p>
+  </section>
+</main>
+<footer>Made with care · Some memories deserve a quiet place</footer>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="secretTitle">
+  <div class="sheet"><div class="handle"></div><h3 id="secretTitle">একটা শেষ কথা…</h3>
+    <p>ত্রিশা, তোমাকে পাওয়া বা না-পাওয়ার হিসেবের বাইরে গিয়েও চাই, তুমি ভালো থাকো। কোনো অভিমান যেন তোমার পথ আটকে না রাখে। হয়তো কোনোদিন এই গল্পটা মনে পড়বে—তখন শুধু এটুকু মনে রেখো, একসময় কেউ একজন তোমার হাসিটাকে খুব সুন্দর একটা স্মৃতি ভেবেছিল।</p>
+    <button class="close" id="closeBtn">Close gently</button>
+  </div>
+</div>
+<script>
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.getElementById('enterBtn').addEventListener('click',()=>{
+  const hero=document.getElementById('welcome'),story=document.getElementById('story');
+  if(!reduceMotion){hero.style.transition='opacity .65s ease';hero.style.opacity='0';}
+  setTimeout(()=>{story.classList.add('visible');story.scrollIntoView({behavior:reduceMotion?'auto':'smooth'});},reduceMotion?0:300);
+});
+const overlay=document.getElementById('overlay');
+const closeSheet=()=>overlay.classList.remove('show');
+document.getElementById('secretBtn').addEventListener('click',()=>{overlay.classList.add('show');document.getElementById('closeBtn').focus();});
+document.getElementById('closeBtn').addEventListener('click',closeSheet);
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeSheet();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet();});
+</script>
+</body>
+</html>
